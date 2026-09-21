@@ -35,8 +35,13 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(Arrays.stream(allowedOriginPatterns.split(","))
-                .map(String::trim)
+        configuration.setAllowedOriginPatterns(java.util.stream.Stream.concat(
+                Arrays.stream(allowedOriginPatterns.split(","))
+                        .map(String::trim),
+                java.util.stream.Stream.of(
+                        "https://sgarpf-production.up.railway.app",
+                        "https://dialmorx-wq.github.io"))
+                .distinct()
                 .toList());
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
