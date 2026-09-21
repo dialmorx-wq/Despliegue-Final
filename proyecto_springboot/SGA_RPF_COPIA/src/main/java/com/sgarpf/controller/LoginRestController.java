@@ -11,7 +11,8 @@ import com.sgarpf.repository.UsuarioRepository;
 	    "http://127.0.0.1:8080",
 	    "http://localhost:8082",
 	    "http://127.0.0.1:8082",
-        "https://sgarpf-production.up.railway.app"
+        "https://sgarpf-production.up.railway.app",
+        "https://dialmorx-wq.github.io"
 	})
 	@RestController
 	@RequestMapping("/api/auth")
