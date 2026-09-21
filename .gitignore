@@ -1,0 +1,28 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Node / Vue
+proyecto_vscode/node_modules/
+proyecto_vscode/dist/
+# Spring Boot build outputs
+proyecto_springboot/**/target/
+# Backend secrets / environment-specific config
+proyecto_springboot/**/src/main/resources/application.properties
+# Codex local metadata
+.agents/
+.codex/
+.idea/
+proyecto_springboot/.metadata/
+proyecto_springboot/.project

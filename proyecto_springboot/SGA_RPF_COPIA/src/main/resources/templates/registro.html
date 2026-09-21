@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Usuario</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+
+        .contenedor{
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="contenedor">
+
+    <h2>Registro de Usuario</h2>
+
+    <form th:action="@{/guardar}" th:object="${usuario}" method="post">
+
+        <input type="text" th:field="*{nombre}" placeholder="Nombre">
+
+        <input type="email" th:field="*{correo}" placeholder="Correo">
+
+        <input type="password" th:field="*{password}" placeholder="Contraseña">
+
+        <button type="submit">Guardar</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
